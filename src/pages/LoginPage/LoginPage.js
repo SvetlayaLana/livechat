@@ -1,7 +1,11 @@
 import React from 'react';
 
+import PageLayout from 'pages/_layouts/PageLayout';
+
 const LoginPage = () => (
-    <h1>Login page</h1>
+    <PageLayout>
+      <h1>Login Page</h1>
+    </PageLayout>
 );
 
 export default LoginPage;

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Provider } from "react-redux";
 
-import store from './store';
-import Pages from './pages';
+import store from 'store';
+import Pages from 'pages';
 
 function App() {
   return (
