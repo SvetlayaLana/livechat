@@ -1,4 +1,7 @@
 import React from 'react';
+import Particles from 'react-particles-js';
+
+import particlesConfig from './particlesConfig';
 import theme from './PageLayout.scss';
 
 const PageLayout = ({ children }) => (
@@ -7,7 +10,12 @@ const PageLayout = ({ children }) => (
       <h2>PrimeChat</h2>
     </header>
     <div className={ theme.container }>
-      { children }
+      <Particles
+          className={ theme.particlesWrapper }
+          params={ particlesConfig }/>
+      <div className={ theme.content }>
+        { children }
+      </div>
     </div>
   </div>
 );

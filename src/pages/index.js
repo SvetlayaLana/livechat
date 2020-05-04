@@ -13,7 +13,7 @@ export default () => (
         <Switch>
             <Route path="/login" component={ LoginPage }/>
             <Route path="/chat" component={ ChatPage }/>
-            <Route path="/" component={ ChatPage }/>
+            <Route path="/" component={ LoginPage }/>
             <Route component={ Page404 }/>
         </Switch>
     </ConnectedRouter>
