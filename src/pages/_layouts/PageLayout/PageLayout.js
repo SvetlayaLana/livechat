@@ -12,7 +12,8 @@ const PageLayout = ({ children }) => (
     <div className={ theme.container }>
       <Particles
           className={ theme.particlesWrapper }
-          params={ particlesConfig }/>
+          params={ particlesConfig }
+      />
       <div className={ theme.content }>
         { children }
       </div>

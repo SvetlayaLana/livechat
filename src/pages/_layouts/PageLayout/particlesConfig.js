@@ -33,7 +33,7 @@ export default {
         "enable": true,
         "mode": "bubble",
         "parallax": {
-          "enable": false,
+          "enable": true,
           "force": 60,
           "smooth": 10
         }
