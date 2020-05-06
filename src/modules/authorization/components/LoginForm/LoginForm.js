@@ -1,5 +1,5 @@
 import React from 'react';
-import { Field } from "redux-form";
+import { Field, reduxForm } from "redux-form";
 import { Row, Col } from 'react-flexbox-grid';
 import classnames from 'classnames';
 
@@ -23,4 +23,6 @@ const LoginForm = ({ handleSubmit }) => (
     </form>
 );
 
-export default LoginForm;
+export default reduxForm({
+  form: 'login'
+})(LoginForm);
