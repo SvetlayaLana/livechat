@@ -9,14 +9,12 @@ const PageLayout = ({ children }) => (
     <header className={ theme.header }>
       <h2>PrimeChat</h2>
     </header>
-    <div className={ theme.container }>
-      <Particles
-          className={ theme.particlesWrapper }
-          params={ particlesConfig }
-      />
-      <div className={ theme.content }>
-        { children }
-      </div>
+    <Particles
+        className={ theme.particlesWrapper }
+        params={ particlesConfig }
+    />
+    <div className={ theme.content }>
+      { children }
     </div>
   </div>
 );

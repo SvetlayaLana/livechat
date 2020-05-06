@@ -4,17 +4,13 @@ export default {
   "backgroundMask": {
     "cover": {
       "color": {
-        "value": {
-          "r": 0,
-          "g": 0,
-          "b": 0
-        }
+        "value": "#0ef"
       },
-      "opacity": 1
+      "opacity": 0.5
     },
-    "enable": true
+    "enable": false
   },
-  "detectRetina": true,
+  "detectRetina": false,
   "emitters": [],
   "fpsLimit": 30,
   "interactivity": {
@@ -22,7 +18,7 @@ export default {
     "events": {
       "onClick": {
         "enable": true,
-        "mode": "push"
+        "mode": "push",
       },
       "onDiv": {
         "elementId": "",
@@ -31,11 +27,11 @@ export default {
       },
       "onHover": {
         "enable": true,
-        "mode": "bubble",
+        "mode": [],
         "parallax": {
           "enable": true,
-          "force": 60,
-          "smooth": 10
+          "force": 10,
+          "smooth": 50
         }
       },
       "resize": true
@@ -43,10 +39,8 @@ export default {
     "modes": {
       "absorbers": [],
       "bubble": {
-        "distance": 400,
-        "duration": 2,
-        "opacity": 1,
-        "size": 100
+        "distance": 200,
+        "duration": 0.4
       },
       "connect": {
         "distance": 80,
@@ -57,13 +51,13 @@ export default {
       },
       "emitters": [],
       "grab": {
-        "distance": 400,
+        "distance": 100,
         "lineLinked": {
           "opacity": 1
         }
       },
       "push": {
-        "quantity": 4
+        "quantity": 1
       },
       "remove": {
         "quantity": 2
@@ -85,7 +79,7 @@ export default {
       "mode": "bounce"
     },
     "color": {
-      "value": "#ffffff"
+      "value": "#0de"
     },
     "lineLinked": {
       "blink": false,
@@ -95,7 +89,7 @@ export default {
       "consent": false,
       "distance": 150,
       "enable": true,
-      "opacity": 1,
+      "opacity": 0.4,
       "shadow": {
         "blur": 5,
         "color": {
@@ -109,8 +103,8 @@ export default {
       "attract": {
         "enable": false,
         "rotate": {
-          "x": 600,
-          "y": 1200
+          "x": 3000,
+          "y": 3000
         }
       },
       "direction": "none",
@@ -129,17 +123,17 @@ export default {
     },
     "number": {
       "density": {
-        "enable": true,
+        "enable": false,
         "area": 800
       },
       "limit": 0,
-      "value": 80
+      "value": 100
     },
     "opacity": {
       "animation": {
         "enable": false,
-        "minimumValue": 0.1,
-        "speed": 1,
+        "minimumValue": 0,
+        "speed": 2,
         "sync": false
       },
       "random": {
@@ -203,7 +197,7 @@ export default {
         "close": true,
         "height": 100,
         "replaceColor": true,
-        "src": "https://cdn.matteobruni.it/images/particles/github.svg",
+        "src": "",
         "width": 100
       },
       "type": "circle"
@@ -211,19 +205,19 @@ export default {
     "size": {
       "animation": {
         "enable": false,
-        "minimumValue": 0.1,
-        "speed": 40,
+        "minimumValue": 0,
+        "speed": 5,
         "sync": false
       },
       "random": {
-        "enable": true,
+        "enable": false,
         "minimumValue": 1
       },
-      "value": 30
+      "value": 3
     },
     "stroke": {
       "color": {
-        "value": "#000000"
+        "value": "#ff0000"
       },
       "width": 0,
       "opacity": 1

@@ -16,9 +16,11 @@ const middlewares = [
 if(process.env.ENABLE_LOGS)
   middlewares.push(logger);
 
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
 const store = createStore(
     rootReducer(history),
-    compose(applyMiddleware(...middlewares))
+    composeEnhancers(applyMiddleware(...middlewares))
 );
 
 if(process.env.NODE_ENV !== 'production' && module.hot){
