@@ -1,10 +1,17 @@
-import { compose, withProps } from "recompose";
-
+import { compose, withHandlers } from "recompose";
+import { connect } from "react-redux";
+import { authorize } from "../../actions/login";
 import LoginForm from './LoginForm';
 
 export default compose(
-    withProps({
-      onSubmit: (e) => e.preventDefault(),
+    connect(
+      null, {
+      authorize,
+    }),
+    withHandlers({
+      onSubmit: ({ authorize }) => () => {
+        authorize();
+      },
     }),
 )(LoginForm);
 
