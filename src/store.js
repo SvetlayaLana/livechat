@@ -3,6 +3,7 @@ import thunkMiddleware from 'redux-thunk';
 import logger from 'redux-logger';
 import { routerMiddleware } from "connected-react-router";
 import { createBrowserHistory } from "history";
+import { persistStore } from "redux-persist";
 
 import { rootReducer } from "./root";
 
@@ -23,9 +24,11 @@ const store = createStore(
     composeEnhancers(applyMiddleware(...middlewares))
 );
 
+const persistor = persistStore(store);
+
 if(process.env.NODE_ENV !== 'production' && module.hot){
   module.hot.accept('./root', () => store.replaceReducer(rootReducer(history)));
 }
 
-export { history };
+export { history, persistor };
 export default store;

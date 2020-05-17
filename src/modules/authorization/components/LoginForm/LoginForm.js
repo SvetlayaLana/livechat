@@ -1,6 +1,5 @@
 import React from 'react';
 import { Field, reduxForm } from "redux-form";
-import { Row } from 'react-flexbox-grid';
 import classnames from 'classnames';
 import { Checkbox, withStyles } from '@material-ui/core';
 import PropTypes from 'prop-types';

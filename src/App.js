@@ -1,17 +1,20 @@
 import React from 'react';
 import { Provider } from "react-redux";
 import { MuiThemeProvider } from '@material-ui/core/styles';
+import { PersistGate } from 'redux-persist/integration/react'
 
-import store from 'store';
+import store, { persistor } from 'store';
 import Pages from 'pages';
 import muiTheme from 'styleVars/muiTheme';
 
 function App() {
   return (
     <Provider store={ store }>
-      <MuiThemeProvider theme={muiTheme}>
-        <Pages/>
-      </MuiThemeProvider>
+      <PersistGate loading={ null } persistor={ persistor }>
+        <MuiThemeProvider theme={muiTheme}>
+          <Pages/>
+        </MuiThemeProvider>
+      </PersistGate>
     </Provider>
   );
 }
