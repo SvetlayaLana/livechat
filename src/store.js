@@ -10,7 +10,7 @@ const history = createBrowserHistory();
 
 const middlewares = [
   thunkMiddleware,
-  routerMiddleware,
+  routerMiddleware(history),
 ];
 
 if(process.env.ENABLE_LOGS)
