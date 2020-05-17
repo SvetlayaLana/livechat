@@ -2,11 +2,11 @@
 
 .loginForm {
   width: 500px;
-  border: 2px solid $primary-color;
+  border: 2px solid $white-light;
   padding: 30px 20px;
   display: flex;
   flex-direction: column;
-  background: $black-transparent;
+  background: $black-transparent-lighter;
 }
 
 .formField {
@@ -36,15 +36,15 @@
 
 .formSubmit {
   width: 100%;
-  border: 2px solid $primary-color;
+  border: 2px solid $white-light;
   border-radius: 10px;
   background: transparent;
-  color: $primary-color;
+  color: $white-light;
   font-size: 1.1em;
   padding: 10px;
 
   &:hover {
-    background: $primary-color;
+    background: $white-light;
     color: $black-hard;
     cursor: pointer;
   }

@@ -3,7 +3,7 @@ export const validate = values => {
   const { login } = values;
   const errors = {};
 
-  const regExp = /\W/i;
+  const regExp = /[^\w\s]/i;
 
   if(!login)
     errors.login = "Required" ;
