@@ -1,10 +1,12 @@
+@import "styleVars/colors";
+
 .loginForm {
   width: 500px;
-  border: 2px solid white;
+  border: 2px solid $primary-color;
   padding: 30px 20px;
   display: flex;
   flex-direction: column;
-  background: #0000002e;
+  background: $black-transparent;
 }
 
 .formField {
@@ -34,16 +36,22 @@
 
 .formSubmit {
   width: 100%;
-  border: 2px solid white;
+  border: 2px solid $primary-color;
   border-radius: 10px;
   background: transparent;
-  color: white;
+  color: $primary-color;
   font-size: 1.1em;
   padding: 10px;
 
   &:hover {
-    background: white;
-    color: black;
+    background: $primary-color;
+    color: $black-hard;
     cursor: pointer;
   }
+}
+
+.error{
+  margin-top: 10px;
+  color: $red-light;
+  font-weight: 600;
 }
