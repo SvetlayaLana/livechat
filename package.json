@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.9.13",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/styles": "^4.9.13",
     "babel-plugin-jsx-control-statements": "^4.1.0",
     "camelcase": "^5.3.1",
     "case-sensitive-paths-webpack-plugin": "2.3.0",
@@ -19,6 +22,7 @@
     "jsx-control-statements": "^3.2.8",
     "mini-css-extract-plugin": "0.9.0",
     "node-sass": "^4.14.0",
+    "npm": "^6.14.5",
     "optimize-css-assets-webpack-plugin": "5.0.3",
     "pnp-webpack-plugin": "1.6.4",
     "postcss-flexbugs-fixes": "4.1.0",
