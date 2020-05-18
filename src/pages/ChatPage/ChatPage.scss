@@ -1,0 +1,19 @@
+@import "styleVars/colors";
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  height: 100%;
+  padding: 95px 0 15px;
+  display: flex;
+}
+
+.chatRoom {
+  flex-grow: 1;
+  background: $black-transparent;
+}
+
+.contactsList {
+  flex-basis: 350px;
+  background: $white-light;
+}

@@ -2,6 +2,7 @@ import React from 'react';
 import Particles from 'react-particles-js';
 import { ExitToApp } from '@material-ui/icons';
 import { Link } from "react-router-dom";
+import classnames from 'classnames';
 
 import particlesConfig from './particlesConfig';
 import theme from './PageLayout.scss';
@@ -36,7 +37,9 @@ const PageLayout = ({ children, userName, logout, isAuthorized }) => (
         className={ theme.particlesWrapper }
         params={ particlesConfig }
     />
-    <div className={ theme.content }>
+    <div className={ classnames(theme.content, {
+      [theme.chatContainer]: isAuthorized,
+    }) }>
       { children }
     </div>
   </div>
