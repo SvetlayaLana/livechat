@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import ContactItem from './ContactItem';
@@ -10,7 +11,14 @@ const propTypes = {
 
 const ContactsList = ({ contacts }) => (
     <ul className={ theme.listContainer }>
-      { contacts.map(item => <ContactItem key={ item.id } fullName={ item.fullName }/>) }
+      { contacts.map(item =>
+          <Link
+              key={ item.id }
+              to={ `/chat/${ item.id }` }
+          >
+            <ContactItem fullName={ item.fullName }/>
+          </Link>)
+      }
     </ul>
 );
 

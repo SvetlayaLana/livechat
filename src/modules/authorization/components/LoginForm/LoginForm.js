@@ -50,5 +50,8 @@ LoginForm.propTypes = propTypes;
 
 export default reduxForm({
   form: 'login',
+  initialValues: {
+    remembered: false
+  },
   validate,
 })(LoginForm);

@@ -1,7 +1,6 @@
 import React from 'react';
 import Particles from 'react-particles-js';
 import { ExitToApp } from '@material-ui/icons';
-import { Link } from "react-router-dom";
 import classnames from 'classnames';
 
 import particlesConfig from './particlesConfig';
@@ -12,9 +11,7 @@ const PageLayout = ({ children, userName, logout, isAuthorized }) => (
     <header className={ theme.header }>
       <div className={ theme.container }>
         <div className={ theme.logo }>
-          <Link to="/">
-            <h2>LiveChat</h2>
-          </Link>
+          <h2>LiveChat</h2>
         </div>
         {
           isAuthorized &&

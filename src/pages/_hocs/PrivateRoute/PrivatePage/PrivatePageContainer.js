@@ -1,10 +1,12 @@
 import { connect } from "react-redux";
-import { lifecycle, compose } from "recompose";
+import { lifecycle, compose, withHandlers } from "recompose";
 import { logout } from "modules/authorization/actions/logout";
+import { persistor } from "store";
 import PrivatePage from './PrivatePage';
 
 const mapStateToProps = (state) => ({
   isAuthorized: state.authorization.isAuthorized,
+  isRemembered: state.authorization.userInfo.isRemembered,
 });
 
 const mapDispatchToProps = {
@@ -13,9 +15,18 @@ const mapDispatchToProps = {
 
 export default compose(
     connect(mapStateToProps, mapDispatchToProps),
+    withHandlers({
+      onUnloadWindow: ({ isRemembered }) => () => {
+        if(!isRemembered)
+          persistor.purge();
+      }
+    }),
     lifecycle({
+      componentDidMount() {
+        window.addEventListener('unload', this.props.onUnloadWindow)
+      },
       componentWillUnmount() {
-        this.props.logout();
+        window.removeEventListener('unload', this.props.onUnloadWindow)
       }
     })
 )(PrivatePage);
