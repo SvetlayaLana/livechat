@@ -1,7 +1,9 @@
 import { connect } from "react-redux";
 import { lifecycle, compose, withHandlers } from "recompose";
-import { logout } from "modules/authorization/actions/logout";
+
 import { persistor } from "store";
+import { startObservingMessages, stopObservingMessages } from "modules/chat/actions/chatUpdates";
+
 import PrivatePage from './PrivatePage';
 
 const mapStateToProps = (state) => ({
@@ -10,7 +12,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = {
-  logout,
+  startObservingMessages,
+  stopObservingMessages,
 };
 
 export default compose(
@@ -23,10 +26,14 @@ export default compose(
     }),
     lifecycle({
       componentDidMount() {
-        window.addEventListener('unload', this.props.onUnloadWindow)
+        window.addEventListener('unload', this.props.onUnloadWindow);
+        console.log('mounted...');
+        this.props.startObservingMessages();
       },
       componentWillUnmount() {
-        window.removeEventListener('unload', this.props.onUnloadWindow)
+        window.removeEventListener('unload', this.props.onUnloadWindow);
+
+        this.props.stopObservingMessages();
       }
     })
 )(PrivatePage);
